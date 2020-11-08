@@ -10,6 +10,7 @@ automation:
     alias: Turn entrance light on when door opens
     trigger:
       - platform: device
+        device_id: ffd5abb63bdb40ffba91adaf9f4aa579
         domain: binary_sensor
         type: opened
         entity_id: binary_sensor.lumi_lumi_sensor_magnet_0e2ced00_on_off
