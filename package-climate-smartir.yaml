@@ -7,6 +7,6 @@ climate:
     name: AC
     unique_id: ac
     device_code: 1401
-    controller_data: 0bf3d07daa0a259df5539420b853153f
+    controller_data: remote.rm_pro_hub_remote
     temperature_sensor: sensor.netatmo_smartnest_komnata_temperature
     humidity_sensor: sensor.netatmo_smartnest_komnata_humidity
