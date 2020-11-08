@@ -1,0 +1,7 @@
+camera:
+  - platform: generic
+    name: Rome
+    still_image_url: http://192.168.31.59:8080/stream/snapshot.jpg
+    stream_source: !secret camera_rome_stream_source
+    username: !secret camera_rome_username
+    password: !secret camera_rome_password

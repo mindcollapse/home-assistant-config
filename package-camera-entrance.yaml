@@ -1,0 +1,16 @@
+camera:
+  - platform: generic
+    name: Entrance
+    still_image_url: http://192.168.31.100/Streaming/channels/1/picture
+    stream_source: !secret camera_entrance_stream_source
+    username: !secret camera_entrance_username
+    password: !secret camera_entrance_password
+
+binary_sensor:
+  - platform: hikvision
+    name: Entrance
+    host: 192.168.31.100
+    port: 80
+    ssl: false
+    username: !secret camera_entrance_username
+    password: !secret camera_entrance_password

@@ -1,0 +1,49 @@
+sensor:
+  - platform: mqtt
+    name: Kitchen Temperature
+    state_topic: "1761608108.T1"
+    unit_of_measurement: "C"
+
+  - platform: mqtt
+    name: Gas
+    state_topic: "1761608108.TCh1"
+    value_template: "{{ value | float / 100 }}"
+    unit_of_measurement: "m3"
+
+  - platform: mqtt
+    name: electricity_volts
+    state_topic: "1694499414.V"
+    unit_of_measurement: "V"
+    icon: "mdi:flash"
+
+  - platform: mqtt
+    name: electricity_ampers
+    state_topic: "1694499414.A"
+    unit_of_measurement: "A"
+    icon: "mdi:flash"
+
+  - platform: mqtt
+    name: electricity_watts
+    state_topic: "1694499414.W"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+
+  - platform: mqtt
+    name: electricity_kilowattshours
+    state_topic: "1694499414.KWh"
+    unit_of_measurement: "KWh"
+    icon: "mdi:flash"
+
+  - platform: mqtt
+    name: electricity_power_factor
+    state_topic: "1694499414.PF"
+    icon: "mdi:flash"
+
+utility_meter:
+  gas_consumption:
+    source: sensor.gas
+    cycle: monthly
+
+  electricity_consumption:
+    source: sensor.electricity_kilowattshours
+    cycle: monthly

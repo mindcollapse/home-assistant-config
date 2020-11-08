@@ -1,0 +1,40 @@
+switch:
+  - platform: broadlink
+    mac: "B4:43:0D:FB:DF:02"
+    switches:
+      bedroom_right:
+        friendly_name: "Right Bedroom"
+        command_on: "soAmABMGBgYGBgYMBgYMDAwGBgwMDAYGBgYGBgYGDAYGDAwGBgwGBgAAAAA="
+        command_off: "soAmABMGBgYGBgYMBgYMDAwGBgwMDAYGBgYGBgYGDAwMBgYGBgwGBgAAAAA="
+      bedroom_left:
+        friendly_name: "Left Bedroom"
+        command_on: "soAmABMGBgYGBgYMDAwGBgYGDAwMBgYMBgYGBgYGDAYGDAwGBgwGBgAAAAA="
+        command_off: "soAmABMGBgYGBgYMDAwGBgYGDAwMBgYMBgYGBgYGDAwMBgYGBgwGBgAAAAA="
+      bedroom:
+        friendly_name: "Bedroom"
+        command_on: "soAmABMGBgYGBgYMDAYGBgYMDAYGBgYMBgYMDAYGDAYGDAwGBgwGBgAAAAA="
+        command_off: "soAmABMGBgYGBgYMDAYGBgYMDAYGBgYMBgYMDAYGDAwMBgYGBgwGBgAAAAA="
+      entrance:
+        friendly_name: "Entrance"
+        command_on: "soAmABMGBgYGDAYGBgYGBgYGDAYGBgYMDAYGDAYGBgYMBgYMDAYGDAYGAAA="
+        command_off: "soAmABMGBgYGDAYGBgYGBgYGDAYGBgYMDAYGDAYGBgYMDAwGBgYGDAYGAAA="
+      livingroom:
+        friendly_name: "Livingroom"
+        command_on: "soAmABMGBgwGBgYGDAYGDAwGBgwMBgYGBgwMDAwGBgwMBgYMBgYAAAAAAAA="
+        command_off: "soAmABMGBgwGBgYGDAYGDAwGBgwMBgYGBgwMDAwMDAYGBgYMBgYAAAAAAAA="
+      kitchen_left:
+        friendly_name: "Left kitchen"
+        command_on: "soAmABMGBgYGDAYGBgYMBgYMDAwMBgYGBgwGBgYGDAYGDAwGBgwGBgAAAAA="
+        command_off: "soAmABMGBgYGDAYGBgYMBgYMDAwMBgYGBgwGBgYGDAwMBgYGBgwGBgAAAAA="
+      kitchen_right:
+        friendly_name: "Right kithen"
+        command_on: "soAmABMMBgYGBgwMDAYGBgYGBgwGBgYGBgYGBgYGBgYMBgYMDAYGDAYGAAA="
+        command_off: "soAmABMMBgYGBgwMDAYGBgYGBgwGBgYGBgYGBgYGBgYMDAwGBgYGDAYGAAA="
+      soundbar:
+        friendly_name: "Soundbar"
+        command_on: "JgBOAJSSEhMSExE4EjcSExI3EhMSExETEhMSNxI4ERQROBEUERMSExI3EjcSOBI3EhMSExETEjgRExITEhMRExI4ETgSNxIABgCVkhI3EgANBQAAAAAAAAAAAAA="
+        command_off: "JgBOAJSSEhMSExE4EjcSExI3EhMSExETEhMSNxI4ERQROBEUERMSExI3EjcSOBI3EhMSExETEjgRExITEhMRExI4ETgSNxIABgCVkhI3EgANBQAAAAAAAAAAAAA="
+      tv:
+        friendly_name: "TV"
+        command_on: "JgB0AAABJ5MSFBISEjcUERIUEhISExMRFDYTNxMRFDYTNhM3EzYSNhMUExETEhM3ERMTEhITExITNhM3EzcSEhM2FDUUNxM2EgADJAgAAdoAAShJEwAMUwABKEkTAAxRAAEoSRMADFEAAShJEwAMUQABKEkTAA0FAAAAAA=="
+        command_off: "JgB0AAABJ5MSFBISEjcUERIUEhISExMRFDYTNxMRFDYTNhM3EzYSNhMUExETEhM3ERMTEhITExITNhM3EzcSEhM2FDUUNxM2EgADJAgAAdoAAShJEwAMUwABKEkTAAxRAAEoSRMADFEAAShJEwAMUQABKEkTAA0FAAAAAA=="

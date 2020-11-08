@@ -1,0 +1,30 @@
+default_config:
+
+homeassistant:
+  name: Home
+
+  internal_url: !secret url
+  external_url: !secret url
+
+  latitude: !secret latitude
+  longitude: !secret longitude
+
+  time_zone: Europe/Kiev
+  unit_system: metric
+  
+  allowlist_external_dirs:
+    - /tmp
+
+  packages:
+    alexa: !include package-alexa.yaml
+    camera_entrance: !include package-camera-entrance.yaml
+    camera_rome: !include package-camera-rome.yaml
+    climate_smartir: !include package-climate-smartir.yaml
+    netatmo: !include package-netatmo.yaml
+    sensor_smartmac: !include package-sensor-smartmac.yaml
+    switch_broadlink_hub: !include package-switch-broadlink-hub.yaml
+    telegram: !include package-telegram.yaml
+    xiaomi_vacuum: !include package-xiaomi-vacuum.yaml
+  
+automation: !include automations.yaml
+shell_command: !include shell-commands.yaml
