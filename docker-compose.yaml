@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  hass:
+    image: homeassistant/home-assistant:stable
+    privileged: true
+    restart: always
+    volumes:
+      - /opt/hass:/config
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/snd:/dev/snd
+    environment:
+      - TZ=Europe/Kyiv
+    network_mode: host
+    depends_on:
+      - mqtt
+
+  mqtt:
+    image: eclipse-mosquitto
+    restart: always
+    ports:
+      - 1883:1883
+    volumes:
+      - /opt/mqtt/data:/mosquitto/data
+      - /opt/mqtt/logs:/mosquitto/logs
+      - /opt/mqtt/config:/mosquitto/config
