@@ -14,3 +14,23 @@ binary_sensor:
     ssl: false
     username: !secret camera_entrance_username
     password: !secret camera_entrance_password
+
+automation:
+  - id: entrance_line_crossing
+    alias: Entrance line crossing
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.entrance_line_crossing
+        to: "on"
+    action:
+      - service: notify.volodymyr
+        data:
+          message: 🚨 Motion detected on a front door! Here's a photo.
+          data:
+            inline_keyboard:
+              - 📷 Take photo:/entrance-photo
+            photo:
+              - caption: 🚨 Motion detected on a front door! Here's a photo.
+                url: http://192.168.31.100/Streaming/channels/1/picture
+                username: !secret camera_entrance_username
+                password: !secret camera_entrance_password

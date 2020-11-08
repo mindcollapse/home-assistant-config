@@ -1,1 +1,0 @@
-play_doorbell: apk add -q alsa-utils && aplay -q /config/wav/doorbell.wav

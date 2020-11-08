@@ -8,3 +8,26 @@ notify:
   - name: volodymyr
     platform: telegram
     chat_id: 2260537
+
+automation:
+  - id: send_entrance_photo
+    alias: Send entrance photo on request from Telegram
+    trigger:
+      - platform: event
+        event_type: telegram_callback
+        event_data:
+          data: /entrance-photo
+    action:
+      - service: telegram_bot.answer_callback_query
+        data_template:
+          callback_query_id: "{{ trigger.event.data.id }}"
+          message: Photo is on the way...
+      - service: notify.volodymyr
+        data:
+          message: 🚨 Here's another photo for you.
+          data:
+            photo:
+              - caption: 🚨 Here's another photo for you.
+                url: http://192.168.31.100/Streaming/channels/1/picture
+                username: !secret camera_entrance_username
+                password: !secret camera_entrance_password

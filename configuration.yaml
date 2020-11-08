@@ -11,9 +11,6 @@ homeassistant:
 
   time_zone: Europe/Kiev
   unit_system: metric
-  
-  allowlist_external_dirs:
-    - /tmp
 
   packages:
     alexa: !include package-alexa.yaml
@@ -23,11 +20,13 @@ homeassistant:
     climate_smartir: !include package-climate-smartir.yaml
     met: !include package-met.yaml
     mikrotik: !include package-mikrotik.yaml
+    mqtt_broker: !include package-mqtt-broker.yaml
     netatmo: !include package-netatmo.yaml
     sensor_smartmac: !include package-sensor-smartmac.yaml
     switch_broadlink_hub: !include package-switch-broadlink-hub.yaml
+    switch_broadlink_sp3: !include package-switch-broadlink-sp3.yaml
     telegram: !include package-telegram.yaml
     xiaomi_vacuum: !include package-xiaomi-vacuum.yaml
-  
+    zha: !include package-zha.yaml
+
 automation: !include automations.yaml
-shell_command: !include shell-commands.yaml

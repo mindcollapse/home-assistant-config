@@ -3,7 +3,10 @@
 !*.yaml
 !.gitignore
 !*.md
+!misc
+!misc/**
 
 .storage
 
 secrets.yaml
+automations.yaml

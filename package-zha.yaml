@@ -1,0 +1,40 @@
+zha:
+  radio_type: ti_cc
+  usb_path: /dev/ttyACM0
+
+shell_command:
+  play_doorbell: apk add -q alsa-utils && aplay -q /config/misc/doorbell.wav
+
+automation:
+  - id: hall_light_on
+    alias: Turn entrance light on when door opens
+    trigger:
+      - platform: device
+        domain: binary_sensor
+        type: opened
+        entity_id: binary_sensor.lumi_lumi_sensor_magnet_0e2ced00_on_off
+    action:
+      - service: switch.turn_on
+        entity_id: switch.entrance
+
+  - id: doorbell
+    alias: Doorbell
+    trigger:
+      - platform: device
+        device_id: e0feb49399b54ce0b51e5b63bd705eba
+        domain: zha
+        subtype: remote_button_short_press
+        type: remote_button_short_press
+    action:
+      - service: notify.volodymyr
+        data:
+          data:
+            inline_keyboard:
+              - 📷 Take photo:/entrance-photo
+            photo:
+              - caption: 🔔 Ding-dong! Someone rings a doorbell.
+                url: http://192.168.31.100/Streaming/channels/1/picture
+                username: !secret camera_entrance_username
+                password: !secret camera_entrance_password
+          message: 🔔 Ding-dong! Someone rings a doorbell.
+      - service: shell_command.play_doorbell
