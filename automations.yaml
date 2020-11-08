@@ -1,0 +1,82 @@
+- id: '1588096481132'
+  alias: Entrance line crossing
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.entrance_line_crossing
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      data:
+        inline_keyboard:
+        - 📷 Take photo:/entrance-photo
+        photo:
+        - caption: 🚨 Motion detected on a front door! Here's a photo.
+          password: 753dfx
+          url: http://192.168.31.100/Streaming/channels/1/picture
+          username: admin
+      message: 🚨 Motion detected on a front door! Here's a photo.
+    service: notify.volodymyr
+- id: '1588141555209'
+  alias: Send entrance photo on request from Telegram
+  description: ''
+  trigger:
+  - event_data:
+      data: /entrance-photo
+    event_type: telegram_callback
+    platform: event
+  condition: []
+  action:
+  - data_template:
+      callback_query_id: '{{ trigger.event.data.id }}'
+      message: Photo is on the way...
+    service: telegram_bot.answer_callback_query
+  - data:
+      data:
+        photo:
+        - caption: 🚨 Here's another photo for you.
+          password: 753dfx
+          url: http://192.168.31.100/Streaming/channels/1/picture
+          username: admin
+      message: 🚨 Here's another photo for you.
+    service: notify.volodymyr
+- id: '1588706401305'
+  alias: Doorbell
+  description: ''
+  trigger:
+  - device_id: e0feb49399b54ce0b51e5b63bd705eba
+    domain: zha
+    platform: device
+    subtype: remote_button_short_press
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data:
+      data:
+        inline_keyboard:
+        - 📷 Take photo:/entrance-photo
+        photo:
+        - caption: 🔔 Ding-dong! Someone rings a doorbell.
+          password: 753dfx
+          url: http://192.168.31.100/Streaming/channels/1/picture
+          username: admin
+      message: 🔔 Ding-dong! Someone rings a doorbell.
+    service: notify.volodymyr
+  - service: shell_command.play_doorbell
+    data: {}
+  mode: single
+- id: '1588707960332'
+  alias: Turn the entrance light when the door opens
+  description: ''
+  trigger:
+  - device_id: ffd5abb63bdb40ffba91adaf9f4aa579
+    domain: binary_sensor
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_0e2ced00_on_off
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.entrance
+    service: switch.turn_on

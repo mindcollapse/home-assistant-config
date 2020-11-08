@@ -17,6 +17,7 @@ homeassistant:
 
   packages:
     alexa: !include package-alexa.yaml
+    apple_tv: !include package-apple-tv.yaml
     camera_entrance: !include package-camera-entrance.yaml
     camera_rome: !include package-camera-rome.yaml
     climate_smartir: !include package-climate-smartir.yaml

@@ -1,0 +1,9 @@
+# https://github.com/postlund/hass-atv-beta
+
+apple_tv:
+  - address: 10.0.0.1
+    name: Livingroom
+    protocol: mrp
+    credentials:
+      dmap: !secret apple_tv_dmap
+      mrp: !secret apple_tv_mrp
