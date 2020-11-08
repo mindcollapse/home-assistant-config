@@ -20,6 +20,8 @@ homeassistant:
     camera_entrance: !include package-camera-entrance.yaml
     camera_rome: !include package-camera-rome.yaml
     climate_smartir: !include package-climate-smartir.yaml
+    met: !include package-met.yaml
+    mikrotik: !include package-mikrotik.yaml
     netatmo: !include package-netatmo.yaml
     sensor_smartmac: !include package-sensor-smartmac.yaml
     switch_broadlink_hub: !include package-switch-broadlink-hub.yaml
