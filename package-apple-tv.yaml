@@ -2,8 +2,9 @@
 
 apple_tv:
   - address: 10.0.0.1
+    identifier: apple_tv
     name: Livingroom
-    protocol: mrp
+    protocol: MRP
     credentials:
       dmap: !secret apple_tv_dmap
       mrp: !secret apple_tv_mrp
