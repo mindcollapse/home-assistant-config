@@ -1,6 +1,7 @@
 zha:
-  radio_type: ti_cc
-  usb_path: /dev/ttyACM0
+  device_config:
+    /dev/ttyACM0:
+      type: ti_cc
 
 shell_command:
   play_doorbell: apk add -q alsa-utils && aplay -q /config/misc/doorbell.wav
