@@ -14,7 +14,7 @@ Below you can find the list of all devices I have in my Home Assistant setup at 
 * 1 x [Apple TV 4K](https://www.apple.com/apple-tv-4k/);
 * 1 x [Hikvision DS-2CD2112-I](https://hikvision.ru/product/ds_2cd2112_i);
 * 1 x [TP-Link TL-NC250](https://www.tp-link.com/latam/home-networking/cloud-camera/nc250/);
-* [Broadlink RM Pro](https://www.ibroadlink.com/products/ir+rf) which controls: 
+* 1 x [Broadlink RM Pro](https://www.ibroadlink.com/products/ir+rf) which controls: 
     * 1 x Samsung AC;
     * 1 x LG TV;
     * 1 x LG Soundbar;
@@ -27,7 +27,7 @@ Below you can find the list of all devices I have in my Home Assistant setup at 
     * Cold water;
 * 2 x [Broadlink SP3-EU](https://broadlink.ru/broadlink-sp3-) Plug;
 * 1 x [Xiaomi Roborock S5 Max](https://us.roborock.com/pages/roborock-s5-max);
-* [Zigbee CC2531 USB Stick](https://www.itead.cc/cc2531-usb-dongle.html):
+* 1 x Zigbee CC2531 USB Stick](https://www.itead.cc/cc2531-usb-dongle.html) which controls:
     * 1 x [Xiaomi Door Sensor](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-door-window-sensors/);
     * 2 x [Xiaomi Occupancy Sensor](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-occupancy-sensor/);
     * 1 x [Xiaomi Wireless Switch](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-wireless-switch/);
