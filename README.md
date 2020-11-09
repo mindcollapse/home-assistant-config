@@ -27,7 +27,7 @@ Below you can find the list of all devices I have in my Home Assistant setup at 
     * Cold water;
 * 2 x [Broadlink SP3-EU](https://broadlink.ru/broadlink-sp3-) Plug;
 * 1 x [Xiaomi Roborock S5 Max](https://us.roborock.com/pages/roborock-s5-max);
-* 1 x Zigbee CC2531 USB Stick](https://www.itead.cc/cc2531-usb-dongle.html) which controls:
+* 1 x [Zigbee CC2531 USB Stick](https://www.itead.cc/cc2531-usb-dongle.html) which controls:
     * 1 x [Xiaomi Door Sensor](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-door-window-sensors/);
     * 2 x [Xiaomi Occupancy Sensor](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-occupancy-sensor/);
     * 1 x [Xiaomi Wireless Switch](https://xiaomi-mi.com/sockets-and-sensors/xiaomi-mi-wireless-switch/);
